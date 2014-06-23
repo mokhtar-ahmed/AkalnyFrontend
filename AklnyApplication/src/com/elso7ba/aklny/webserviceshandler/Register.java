@@ -20,24 +20,19 @@ import android.widget.Toast;
 
 import com.elso7ba.aklny.connectionutil.*;
 
-public class AklnyAsync extends AsyncTask<Void, Void, Void>
+public class Register extends AsyncTask<Void, Void, Void>
 {
 	
-	String userID;
 	Activity activity;
 	String serverResult;
 	
-	public AklnyAsync(Activity a) 
+	public Register(Activity a) 
 	{
 		activity = a;
 	}
 	
 	@Override
-	protected void onPreExecute() 
-	{
-		super.onPreExecute();
-		
-		
+	protected void onPreExecute(){
 	}
 
 	@Override
@@ -45,38 +40,14 @@ public class AklnyAsync extends AsyncTask<Void, Void, Void>
 	{
 		ServiceHandler sh = new ServiceHandler(activity);
 		List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
-
-		
-//		getPref(String key , Context con);
 		nameValuePairs.add(new BasicNameValuePair("id", "1"));
-		
-		
-		
-	    serverResult =  sh.makeServiceCall(HttpConstants.AKLNY_URL, ServiceHandler.POST,nameValuePairs);
-	    
-	    System.out.println("getScore: "+serverResult);
+	    serverResult =  sh.makeServiceCall(HttpConstants.REGISTER_URL, ServiceHandler.POST,nameValuePairs);
 		return null;
 	}
 	
 	@Override
 	protected void onPostExecute(Void result) 
 	{
-		super.onPostExecute(result);
-		
-		/*
-		try 
-		{
-			JSONObject obj = new JSONObject(serverResult);
-			scene.changeDialogText(""+obj.get("order") , ""+obj.get("nu"));
-			System.out.println("Order: "+obj.get("order"));
-			System.out.println("Number: "+obj.get("nu"));
-			
-		} 
-		catch (JSONException e) 
-		{
-			e.printStackTrace();
-		}
-		*/
 		
 	
 	}

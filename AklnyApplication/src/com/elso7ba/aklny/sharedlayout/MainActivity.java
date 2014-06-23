@@ -1,16 +1,15 @@
 package com.elso7ba.aklny.sharedlayout;
 
-import info.androidhive.tabsswipe.R;
+import com.elso7ba.aklny.R;
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 
+@SuppressLint("NewApi")
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener 
 {
 
@@ -40,10 +39,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		{
 			actionBar.addTab(actionBar.newTab().setText(tab_name).setTabListener(this));
 		}
-
-		/**
-		 * on swiping the viewpager make respective tab selected
-		 * */
 		viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() 
 		{
 
@@ -78,8 +73,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	@Override
 	public void onTabSelected(Tab tab, FragmentTransaction ft) 
 	{
-		// on tab selected
-		// show respected fragment view
 		viewPager.setCurrentItem(tab.getPosition());
 	}
 
