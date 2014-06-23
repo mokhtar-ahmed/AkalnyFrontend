@@ -1,6 +1,8 @@
 package com.elso7ba.aklny.aklnyfragment;
 
-import info.androidhive.tabsswipe.R;
+
+import com.elso7ba.aklny.R;
+
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;

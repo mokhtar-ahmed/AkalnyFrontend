@@ -1,13 +1,12 @@
 package com.elso7ba.aklny.sharedlayout;
 
-import info.androidhive.tabsswipe.R;
+import com.elso7ba.aklny.R;
+
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 
@@ -20,6 +19,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	// Tab titles
 	private String[] tabs = { "Aklny", "Resturant", "History" };
 
+	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
