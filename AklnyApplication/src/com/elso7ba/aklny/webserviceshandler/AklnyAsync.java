@@ -52,7 +52,7 @@ public class AklnyAsync extends AsyncTask<Void, Void, Void>
 		
 		
 		
-	    serverResult =  sh.makeServiceCall(SharedPreferenceUtil.AKLNY_URL, ServiceHandler.POST,nameValuePairs);
+	    serverResult =  sh.makeServiceCall(HttpConstants.AKLNY_URL, ServiceHandler.POST,nameValuePairs);
 	    
 	    System.out.println("getScore: "+serverResult);
 		return null;
