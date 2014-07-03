@@ -1,6 +1,7 @@
 package com.elso7ba.aklny.sharedlayout;
 
 import com.elso7ba.aklny.R;
+
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
@@ -19,6 +20,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	// Tab titles
 	private String[] tabs = { "Aklny", "Resturant", "History" };
 
+	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
